@@ -6,15 +6,14 @@ function cn(...classes:string[]){
     return classes.filter(Boolean).join(' ')
 }
 
-const LazyImage:React.FC = ({data}:{data:CharacterType}) => {
+const LazyImage:React.FC = ({image}:any) => {
     const [loading,setLoading] = useState(true) 
   return (
     <div className="group">
     <div className='aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8'>
-
-      <Image 
-      alt={data.name}
-      src={data.photoUrl}
+     <Image 
+      alt={image.name}
+      src={!image.photoUrl?"https://bit.ly/placeholder-img": image.photoUrl}
       layout='fill'
       objectFit='cover'
       className={cn(
@@ -26,8 +25,8 @@ const LazyImage:React.FC = ({data}:{data:CharacterType}) => {
       onLoadingComplete={()=>setLoading(false)}
       />
       </div>
-      <h3 className="mt-4 text-sm text-gray-700">{data.name}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{data.affiliation}</p>
+      <h3 className="mt-4 text-sm text-gray-700">{image.name}</h3>
+      <p className="mt-1 text-lg font-medium text-gray-900">{image.affiliation}</p>
     </div>    
   )
 }
