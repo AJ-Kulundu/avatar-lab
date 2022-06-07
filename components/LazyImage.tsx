@@ -6,7 +6,7 @@ function cn(...classes:string[]){
     return classes.filter(Boolean).join(' ')
 }
 
-const LazyImage:React.FC = ({image}:any) => {
+const LazyImage:React.FC<{image:CharacterType}> = ({image}:{image:CharacterType}) => {
     const [loading,setLoading] = useState(true) 
   return (
     <div className="group">
@@ -26,7 +26,7 @@ const LazyImage:React.FC = ({image}:any) => {
       />
       </div>
       <h3 className="mt-4 text-sm text-gray-700">{image.name}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{image.affiliation}</p>
+      <p className="mt-1 text-lg font-medium text-gray-900">{!image.affiliation?"No Affiliation":image.affiliation}</p>
     </div>    
   )
 }
