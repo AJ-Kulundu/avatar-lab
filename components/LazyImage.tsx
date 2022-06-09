@@ -23,6 +23,7 @@ const LazyImage:React.FC<{image:CharacterType}> = ({image}:{image:CharacterType}
           : 'scale-100 blur-0 grayscale-0'
       )}
       onLoadingComplete={()=>setLoading(false)}
+      priority={image.photoUrl=="https://vignette.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest?cb=20130612174003"? true :false}
       />
       </div>
       <h3 className="mt-4 text-sm text-gray-700">{image.name}</h3>
