@@ -3,7 +3,6 @@ import { CharacterType } from '../models/character.interface'
 
 const instance = axios.create({
     baseURL:"https://last-airbender-api.herokuapp.com/api/v1/",
-    timeout:1500
 })
 
 

@@ -10,7 +10,7 @@ const LazyImage:React.FC<{image:CharacterType}> = ({image}:{image:CharacterType}
     const [loading,setLoading] = useState(true) 
   return (
     <div className="group">
-    <div className='aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8'>
+    <div className='aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800 xl:aspect-w-7 xl:aspect-h-8'>
      <Image 
       alt={image.name}
       src={!image.photoUrl?"https://bit.ly/placeholder-img": image.photoUrl}
@@ -26,8 +26,8 @@ const LazyImage:React.FC<{image:CharacterType}> = ({image}:{image:CharacterType}
       priority={image.photoUrl=="https://vignette.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest?cb=20130612174003"? true :false}
       />
       </div>
-      <h3 className="mt-4 text-sm text-gray-700">{image.name}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{!image.affiliation?"No Affiliation":image.affiliation}</p>
+      <h3 className="mt-4 text-md text-slate-800 group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-slate-100">{image.name}</h3>
+      <p className="mt-1 text-lg font-medium text-slate-800 group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-slate-100">{!image.affiliation?"No Affiliation":image.affiliation}</p>
     </div>    
   )
 }
