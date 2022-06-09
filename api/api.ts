@@ -15,4 +15,5 @@ const requests = {
 
 export const Character = {
     getCharacter: () : Promise<CharacterType[]> => requests.get('characters'),
+    getAvatar:():Promise<any> => requests.get('characters/avatar')
 }
