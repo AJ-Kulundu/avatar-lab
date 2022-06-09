@@ -7,7 +7,6 @@ import LazyImage from '../components/LazyImage';
 export const  getServerSideProps:GetServerSideProps = async (context) => {
   let result:CharacterType[] ;
   await Character.getCharacter().then((data) => result=data)
- console.log(result)
 return{
   props:{
     data:result
