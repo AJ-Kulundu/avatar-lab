@@ -35,10 +35,10 @@ const NavBar:React.FC = () => {
   return (
     <div className="sticky top-0 z-10 flex flex-col backdrop-blur-xl shadow-sm ">
     <div className="flex flex-row w-full px-4 py-4 justify-between align-middle items-center">
-        <h3 className="align-middle text-xl text-slate-800 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100">Avatar App</h3>
+        <h3 className="align-middle text-xl text-slate-800 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"> <NavLink href="/">Avatar App</NavLink></h3>
         <div className="hidden md:flex md:display:inline flex-row px-4 md:w-1/3 lg:w-1/5 justify-between align-middle items-center ">
           {renderThemeIcon()}
-           <NavLink href="/">Characters</NavLink>
+           <NavLink href="/characters">Characters</NavLink>
            <NavLink href="/avatars">Avatars</NavLink>
         </div>
         <div className="flex flex-row base:display:inline md:hidden w-1/5 justify-between align-middle items-center">
