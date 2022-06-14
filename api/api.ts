@@ -17,4 +17,5 @@ export const Character = {
     getCharacter: () : Promise<CharacterType[]> => requests.get('characters'),
     getAvatar:():Promise<any> => requests.get('characters/avatar'),
     getRandomCharacter:(count:number):Promise<RandomType[]> => requests.get(`characters/random?count=${count}`),
+    getSingleCharacter:(_id:string | string[]):Promise<RandomType> => requests.get(`characters/${_id}`),
 }
