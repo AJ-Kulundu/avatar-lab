@@ -44,9 +44,9 @@ const Navlink: React.FC <NavLinkType> = ({href,children}) =>{
 return(
   <Link href={href} passHref>
     <a>
-    <h3 className='mt-4 text-lg text-slate-800 group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-slate-100'>{children}</h3>
+      <h3 className='mt-4 text-lg text-slate-800 group-hover:text-slate-900 dark:text-slate-300 dark:group-hover:text-slate-100'>{children}</h3>
     </a>
-    </Link>
+  </Link>
 )
 }
 export default LazyImage;
