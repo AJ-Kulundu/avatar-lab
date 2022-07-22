@@ -3,13 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CharacterType } from '../models/character.interface';
 import { NavLinkType } from '../models/navLink.interface';
+import { cn } from '../utils/cn';
 
 interface ImageType extends CharacterType{
   href?:string;
-}
-
-function cn(...classes:string[]){
-    return classes.filter(Boolean).join(' ')
 }
 
 const LazyImage:React.FC<{image:ImageType}> = ({image}) => {
