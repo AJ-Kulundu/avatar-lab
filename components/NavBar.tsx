@@ -48,7 +48,7 @@ const NavBar:React.FC = () => {
     </div>
     {isOpen && 
     (<div className="relative flex flex-col base:display-inline md:hidden w-full p-4 justify-center items-center"> 
-    <NavLink href="/" isOpen={isOpen} setIsOpen={setIsOpen}>Characters</NavLink>
+    <NavLink href="/characters" isOpen={isOpen} setIsOpen={setIsOpen}>Characters</NavLink>
     <NavLink href="/avatars" isOpen={isOpen} setIsOpen={setIsOpen}>Avatars</NavLink>
     </div>
     )}
